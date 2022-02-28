@@ -1,0 +1,9 @@
+#+TITLE: Gabber
+#+AUTHOR: Ryan Jeffrey
+#+EMAIL: ryan@ryanmj.xyz
+
+Gabber is script that scans your system for a running game and sends this information
+to an XMPP server.
+
+*** Name
+'Gabber' is a portmanteau of jabber and gamer.
