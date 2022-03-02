@@ -17,7 +17,5 @@ def get_game_id
   end
 end
 
-def init_gabber
-  # For now just print the game ID.
-  puts get_game_id
-end
+# For now just print the game ID.
+puts get_game_id

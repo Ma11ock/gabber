@@ -16,4 +16,3 @@ else
   raise 'Operating system not supported ! :/'
 end
 
-init_gabber
