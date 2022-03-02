@@ -1,7 +1,11 @@
 #!/usr/bin/env ruby
 
-# Gabber is a 
+# Gabber is a Ruby module that gets the name of the currently running
+# steam game. Does not any API keys, no web scraping either!
 
+require 'uri'
+require 'net/http'
+require 'json'
 
 case RUBY_PLATFORM
 when /cygwin|mswin|mingw|bccwin|wince|emx/
@@ -9,10 +13,16 @@ when /cygwin|mswin|mingw|bccwin|wince|emx/
 when /linux/
   require './gabber_linux'
 when /bsd/
-# TODO
+  raise 'BSD is not yet supported ! :/'
 when /darwin|mac/
-# TODO
+  raise 'Mac is not yet supported ! :/'
 else
-  raise 'Operating system not supported ! :/'
+  raise 'Your operating system not supported ! :/'
 end
 
+
+steam_api_call = URI("https://store.steampowered.com/api/appdetails/?appids=431240")
+res = Net::HTTP.get_response(steam_api_call)
+
+obj = JSON.parse(res.body)
+puts obj['431240']['data']['name']
