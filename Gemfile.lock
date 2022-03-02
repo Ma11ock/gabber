@@ -1,3 +1,8 @@
+PATH
+  remote: .
+  specs:
+    Gabber (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -7,6 +12,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  Gabber!
   vdf
 
 BUNDLED WITH

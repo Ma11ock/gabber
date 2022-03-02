@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'gabber'
+
+puts Gabber::SteamGame.new.current_game_name
